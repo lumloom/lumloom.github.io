@@ -11,7 +11,7 @@ export const projects = [
     tags: ['React', 'PWA', 'Education', 'Family'],
     image: null,
     button: 'Open App',
-    url: '/adventure',
+    url: 'https://lumloom.github.io/adventure/',
   },
   {
     id: 'writing',
@@ -22,7 +22,7 @@ export const projects = [
     tags: ['Writing', 'Journal', 'Reflection'],
     image: null,
     button: 'Open App',
-    url: '/writing',
+    url: 'https://lumloom.github.io/writing/',
   },
   {
     id: 'lumloom',
