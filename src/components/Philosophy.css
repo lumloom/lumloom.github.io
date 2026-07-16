@@ -1,0 +1,18 @@
+.philosophy {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  max-width: calc(var(--max-width) + 48px);
+  margin: 0 auto;
+}
+
+.philosophy-text p {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+  max-width: 560px;
+}
+
+.philosophy-text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
