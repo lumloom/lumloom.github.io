@@ -1,17 +1,17 @@
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 40px;
+  gap: 28px;
+  margin-top: 48px;
 }
 
 .project-card {
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 36px;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 250ms ease-out, box-shadow 250ms ease-out;
   display: flex;
   flex-direction: column;
 }
@@ -21,67 +21,168 @@
   box-shadow: var(--shadow-hover);
 }
 
-.project-card.is-coming-soon {
-  background: transparent;
-  border-style: dashed;
-  box-shadow: none;
-}
-
-.project-card.is-coming-soon:hover {
-  transform: none;
-  box-shadow: none;
+.project-card-media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
 }
 
 .project-card-image {
-  border-radius: var(--radius-md);
-  margin-bottom: 20px;
+  transition: transform 250ms ease-out;
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.02);
+}
+
+.project-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+}
+
+.project-card-status-dot {
+  font-size: 8px;
+  line-height: 1;
+}
+
+.status-live .project-card-status-dot {
+  color: var(--color-accent);
+}
+
+.status-building .project-card-status-dot {
+  color: #B0A47C;
+}
+
+.status-planning .project-card-status-dot,
+.status-archive .project-card-status-dot {
+  color: #B5B0A4;
 }
 
 .project-card-title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .project-card-description {
   font-size: 15px;
   color: var(--color-text);
-  margin: 0 0 6px;
+  line-height: 1.65;
+  margin: 0 0 22px;
 }
 
-.project-card-detail {
-  font-size: 14px;
-  color: var(--color-text-secondary);
-  margin: 0 0 20px;
+.project-card-story {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin: 0 0 22px;
 }
 
-.project-card-link {
-  margin-top: auto;
-  align-self: flex-start;
-  font-size: 14px;
-  font-weight: 500;
+.project-card-story-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--color-accent);
-  padding-top: 8px;
+  margin: 0 0 8px;
 }
 
-.project-card-link::after {
-  content: ' →';
+.project-card-story-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin: 0;
 }
 
-.project-card-badge {
-  margin-top: auto;
-  align-self: flex-start;
-  font-size: 13px;
-  font-weight: 500;
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+.project-card-tags li {
+  font-size: 12px;
   color: var(--color-text-secondary);
   background: var(--color-surface);
-  padding: 6px 14px;
+  padding: 4px 12px;
   border-radius: 999px;
+}
+
+.project-card-button {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 22px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--color-accent);
+  color: #fff;
+  transition: transform 250ms ease-out, box-shadow 250ms ease-out;
+}
+
+.project-card-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(32, 32, 32, 0.08);
+}
+
+.project-card-button.is-disabled {
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  cursor: default;
+}
+
+.project-card-button.is-disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.projects-closing {
+  text-align: center;
+  padding: 96px 24px 24px;
+}
+
+.projects-closing p {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2.6vw, 24px);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0 0 28px;
+}
+
+.projects-closing .projects-closing-question {
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
   .project-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 28px;
+  }
+
+  .projects-closing {
+    padding: 64px 12px 12px;
   }
 }

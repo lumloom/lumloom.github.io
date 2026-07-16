@@ -1,24 +1,53 @@
 import { projects } from '../config/projects';
 import { useFadeIn } from '../hooks/useFadeIn';
 
+const statusLabels = {
+  live: 'Live',
+  building: 'Building',
+  planning: 'Planning',
+  archive: 'Archive',
+};
+
 function ProjectCard({ project }) {
-  const isComingSoon = project.status === 'coming-soon';
+  const label = statusLabels[project.status] ?? project.status;
 
   return (
-    <div className={`project-card ${isComingSoon ? 'is-coming-soon' : ''}`}>
+    <article className={`project-card status-${project.status}`}>
       {project.image && (
-        <img src={project.image} alt="" className="project-card-image" />
+        <div className="project-card-media">
+          <img src={project.image} alt="" className="project-card-image" />
+        </div>
       )}
+
+      <p className="project-card-status">
+        <span className="project-card-status-dot" aria-hidden="true">●</span>
+        {label}
+      </p>
+
       <h3 className="project-card-title">{project.title}</h3>
       <p className="project-card-description">{project.description}</p>
-      {project.detail && <p className="project-card-detail">{project.detail}</p>}
 
-      {isComingSoon ? (
-        <span className="project-card-badge">Coming Soon</span>
+      <div className="project-card-story">
+        <p className="project-card-story-label">Why we built this</p>
+        <p className="project-card-story-text">"{project.story}"</p>
+      </div>
+
+      <ul className="project-card-tags" aria-label="Tags">
+        {project.tags.slice(0, 4).map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+
+      {project.disabled ? (
+        <span className="project-card-button is-disabled" aria-disabled="true">
+          {project.button}
+        </span>
       ) : (
-        <a href={project.url} className="project-card-link">Visit</a>
+        <a href={project.url} className="project-card-button">
+          {project.button}
+        </a>
       )}
-    </div>
+    </article>
   );
 }
 
@@ -29,11 +58,29 @@ export default function Projects() {
     <section id="projects" className="section projects" ref={ref}>
       <div className="section-inner fade-in">
         <p className="section-eyebrow">Projects</p>
-        <h2 className="section-title">Small tools, woven with care</h2>
+        <h2 className="section-title">
+          A collection of thoughtful tools,
+          <br />
+          built one at a time.
+        </h2>
+
         <div className="project-grid">
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <ProjectCard key={project.id} project={project} />
           ))}
+        </div>
+
+        <div className="projects-closing">
+          <p>
+            Every project begins
+            <br />
+            with the same question.
+          </p>
+          <p className="projects-closing-question">
+            Can this make someone's day
+            <br />
+            just a little better?
+          </p>
         </div>
       </div>
     </section>
