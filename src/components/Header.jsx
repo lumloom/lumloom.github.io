@@ -5,6 +5,7 @@ export default function Header() {
         <a href="#top" className="header-logo">Lumloom</a>
         <nav className="header-nav" aria-label="Primary">
           <a href="#projects">Projects</a>
+          <a href="#manifesto">Manifesto</a>
           <a href="#about">About</a>
         </nav>
       </div>

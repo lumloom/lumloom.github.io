@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --color-bg: #F7F5F1;
@@ -8,7 +8,7 @@
   --color-text-secondary: #666666;
   --color-border: #DEDACF;
 
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-display: 'Newsreader', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
 
   --radius-lg: 20px;

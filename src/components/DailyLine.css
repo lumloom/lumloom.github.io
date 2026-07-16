@@ -1,0 +1,61 @@
+.daily-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 40px;
+  animation: daily-line-fade 1.2s ease 0.3s both;
+}
+
+.daily-line-rule {
+  flex: 0 0 32px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.daily-line-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.daily-line-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  white-space: nowrap;
+}
+
+@keyframes daily-line-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .daily-line {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .daily-line {
+    gap: 10px;
+  }
+
+  .daily-line-rule {
+    flex-basis: 18px;
+  }
+
+  .daily-line-quote {
+    white-space: normal;
+  }
+}

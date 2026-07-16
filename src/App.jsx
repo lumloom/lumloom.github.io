@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 
 import './components/Header.css';
 import './components/Hero.css';
+import './components/DailyLine.css';
 import './components/Philosophy.css';
 import './components/Manifesto.css';
 import './components/Projects.css';

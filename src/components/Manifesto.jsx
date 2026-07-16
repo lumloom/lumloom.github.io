@@ -4,7 +4,7 @@ export default function Manifesto() {
   const ref = useFadeIn();
 
   return (
-    <section className="section manifesto" ref={ref}>
+    <section id="manifesto" className="section manifesto" ref={ref}>
       <div className="manifesto-inner fade-in">
         <p>
           We don't chase big revolutions.

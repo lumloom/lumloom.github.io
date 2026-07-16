@@ -4,7 +4,7 @@ export default function Philosophy() {
   const ref = useFadeIn();
 
   return (
-    <section className="section philosophy" ref={ref}>
+    <section id="philosophy" className="section philosophy" ref={ref}>
       <div className="section-inner fade-in">
         <p className="section-eyebrow">Why Lumloom?</p>
         <h2 className="section-title">A name woven from two ideas</h2>

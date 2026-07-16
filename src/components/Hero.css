@@ -1,9 +1,25 @@
 .hero {
-  padding: 140px 24px 120px;
+  position: relative;
+  padding: 140px 24px 72px;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(123, 143, 119, 0.07), rgba(123, 143, 119, 0) 60%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   max-width: 640px;
   margin: 0 auto;
 }
@@ -22,35 +38,77 @@
   font-size: clamp(20px, 3vw, 24px);
   font-style: italic;
   color: var(--color-accent);
-  margin: 0 0 32px;
+  margin: 0 0 28px;
 }
 
 .hero-sub {
-  font-size: 17px;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2.4vw, 22px);
   color: var(--color-text-secondary);
-  line-height: 1.8;
-  margin: 0 0 44px;
+  line-height: 1.6;
+  margin: 0 0 40px;
 }
 
 .hero-cta {
-  display: inline-block;
-  padding: 14px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 26px;
   background: var(--color-accent);
   color: #fff;
-  border-radius: var(--radius-md);
-  font-size: 15px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
   font-weight: 500;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 1px 2px rgba(32, 32, 32, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(32, 32, 32, 0.08);
+}
+
+.hero-scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 56px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.hero-scroll-hint:hover {
+  opacity: 1;
+}
+
+.hero-scroll-arrow {
+  font-size: 14px;
+  animation: hero-scroll-bounce 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-arrow {
+    animation: none;
+  }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding: 96px 20px 80px;
+    padding: 96px 20px 56px;
   }
 }
