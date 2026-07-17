@@ -30,6 +30,9 @@ function ProjectCard({ project }) {
       <div className="project-card-story">
         <p className="project-card-story-label">Why we built this</p>
         <p className="project-card-story-text">"{project.story}"</p>
+        {project.storyKo && (
+          <p className="project-card-story-ko ko-serif">{project.storyKo}</p>
+        )}
       </div>
 
       <ul className="project-card-tags" aria-label="Tags">

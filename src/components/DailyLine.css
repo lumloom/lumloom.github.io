@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 20px;
   margin: 0 0 40px;
   animation: daily-line-fade 1.2s ease 0.3s both;
 }
@@ -11,6 +11,13 @@
   flex: 0 0 32px;
   height: 1px;
   background: var(--color-border);
+}
+
+.daily-line-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .daily-line-eyebrow {
@@ -25,10 +32,16 @@
 .daily-line-quote {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-text-secondary);
   margin: 0;
-  white-space: nowrap;
+}
+
+.daily-line-quote-ko {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  opacity: 0.75;
+  margin: 0;
 }
 
 @keyframes daily-line-fade {
@@ -48,14 +61,10 @@
 
 @media (max-width: 640px) {
   .daily-line {
-    gap: 10px;
+    gap: 12px;
   }
 
   .daily-line-rule {
     flex-basis: 18px;
-  }
-
-  .daily-line-quote {
-    white-space: normal;
   }
 }

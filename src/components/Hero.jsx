@@ -12,6 +12,11 @@ export default function Hero() {
           <br />
           for everyday life.
         </p>
+        <p className="hero-korean ko">
+          작은 아이디어가
+          <br />
+          하루를 조금 더 밝게 만듭니다.
+        </p>
 
         <DailyLine />
 

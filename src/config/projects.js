@@ -1,6 +1,8 @@
 // Each project card is rendered from this array — add a project by adding an entry.
 // status: 'live' | 'building' | 'planning' | 'archive'
 // button: label of the primary action; use disabled: true for non-clickable buttons.
+// storyKo is the Korean emotional voice — a companion thought, not a translation.
+// Use \n inside storyKo for intentional line breaks (rendered with pre-line).
 export const projects = [
   {
     id: 'adventure',
@@ -8,6 +10,7 @@ export const projects = [
     title: '오늘의 모험',
     description: 'A daily adventure app that transforms small tasks into meaningful quests.',
     story: 'I wanted everyday routines to become adventures for my son.',
+    storyKo: "아이에게 '해야 하는 일'보다\n'하고 싶은 모험'을 선물하고 싶었습니다.",
     tags: ['React', 'PWA', 'Education', 'Family'],
     image: null,
     button: 'Open App',
@@ -19,6 +22,7 @@ export const projects = [
     title: '하루문장',
     description: 'A quiet place to write one sentence every day.',
     story: 'Writing one sentence is often easier than writing an entire page.',
+    storyKo: '한 페이지는 어려워도,\n한 문장이면 오늘의 마음을 남길 수 있습니다.',
     tags: ['Writing', 'Journal', 'Reflection'],
     image: null,
     button: 'Open App',
@@ -30,6 +34,7 @@ export const projects = [
     title: 'Lumloom',
     description: 'The home of every project built under Lumloom.',
     story: 'Every project deserves a thoughtful home.',
+    storyKo: '모든 프로젝트에게\n따뜻한 집을 지어주고 싶었습니다.',
     tags: ['Brand', 'Website', 'Design'],
     image: null,
     button: 'Current Page',
@@ -42,6 +47,7 @@ export const projects = [
     title: 'Knowledge Garden',
     description: 'A searchable collection of notes and ideas.',
     story: 'Knowledge should grow, not disappear inside folders.',
+    storyKo: '지식은 폴더 속에 잠드는 것이 아니라,\n정원처럼 자라나야 한다고 믿습니다.',
     tags: ['Obsidian', 'Quartz', 'Knowledge'],
     image: null,
     button: 'Coming Soon',
@@ -54,6 +60,7 @@ export const projects = [
     title: 'Finance Companion',
     description: 'Thoughtful accounting and finance tools.',
     story: 'Work should feel simpler, not heavier.',
+    storyKo: '일은 조금 더 가볍게,\n마음은 조금 더 단단하게.',
     tags: ['Accounting', 'Finance', 'Tools'],
     image: null,
     button: 'Coming Soon',
@@ -66,6 +73,7 @@ export const projects = [
     title: 'AI Workspace',
     description: 'A growing collection of AI workflows and practical tools.',
     story: 'AI should reduce friction, not create complexity.',
+    storyKo: '복잡함을 걷어내면,\n비로소 본질이 보입니다.',
     tags: ['AI', 'Automation', 'Workflow'],
     image: null,
     button: 'Coming Soon',
