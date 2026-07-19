@@ -38,21 +38,12 @@
   font-size: clamp(20px, 3vw, 24px);
   font-style: italic;
   color: var(--color-accent);
-  margin: 0 0 28px;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.hero-sub {
-  font-family: var(--font-display);
-  font-size: clamp(19px, 2.4vw, 22px);
+.hero-slogan-sub {
   color: var(--color-text-secondary);
-  line-height: 1.6;
-  margin: 0 0 20px;
-}
-
-.hero-korean {
-  font-size: 15px;
-  color: var(--color-text-secondary);
-  opacity: 0.85;
   margin: 0 0 40px;
 }
 

@@ -12,21 +12,11 @@
   margin: 0 0 28px;
 }
 
-.manifesto-inner p.manifesto-emphasis {
-  color: var(--color-text);
-  font-weight: 500;
-}
-
 .manifesto-inner p.manifesto-korean {
   font-family: var(--font-korean-serif);
   font-size: clamp(15px, 2vw, 17px);
   line-height: 2;
   color: var(--color-text-secondary);
   opacity: 0.85;
-  margin: -8px 0 40px;
-}
-
-.manifesto-inner p.manifesto-korean-closing {
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 0;
 }
