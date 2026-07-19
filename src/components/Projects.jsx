@@ -46,7 +46,12 @@ function ProjectCard({ project }) {
           {project.button}
         </span>
       ) : (
-        <a href={project.url} className="project-card-button">
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          className="project-card-button"
+        >
           {project.button}
         </a>
       )}
