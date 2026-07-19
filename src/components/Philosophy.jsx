@@ -19,7 +19,7 @@ export default function Philosophy() {
             <strong>Loom</strong> represents patiently weaving small moments
             into something meaningful.
             <span className="philosophy-ko ko">
-              작은 순간들을 천천히 엮어 의미를 만드는 베틀.
+              작은 순간들을 인내심을 갖고 하나의 의미있는 것으로 엮어내는 과정.
             </span>
           </p>
           <p>
