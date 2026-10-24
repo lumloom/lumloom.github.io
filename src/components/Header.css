@@ -38,8 +38,17 @@
   color: var(--color-text);
 }
 
+.header-nav a[aria-current='page'] {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
 @media (max-width: 640px) {
   .header-nav {
-    gap: 18px;
+    gap: 14px;
+  }
+
+  .header-nav a {
+    font-size: 13px;
   }
 }

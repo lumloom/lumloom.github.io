@@ -13,6 +13,8 @@ The official landing page for the Lumloom brand — a home for small ideas and s
 ## Structure
 
 ```
+index.html          Home page — hero, projects, and about
+about.html          Why Lumloom and Manifesto page
 src/
   components/   Header, Hero, Philosophy, Manifesto, Projects, About, Footer
   config/       projects.js — add new projects/apps here

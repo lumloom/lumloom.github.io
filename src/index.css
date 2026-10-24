@@ -100,6 +100,29 @@ button:focus-visible {
   color: var(--color-text);
 }
 
+.about-page-hero {
+  padding: 120px 24px 80px;
+  text-align: center;
+}
+
+.about-page-hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.about-page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 7vw, 64px);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.about-page-hero p:last-child {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
 /* Korean as the emotional voice: lighter weight, generous line height. */
 .ko {
   font-family: var(--font-korean);

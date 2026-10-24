@@ -16,13 +16,35 @@ import './components/About.css';
 import './components/Footer.css';
 
 function App() {
+  const isAboutPage = window.location.pathname.endsWith('/about.html');
+
+  if (isAboutPage) {
+    return (
+      <>
+        <Header currentPage="about" />
+        <main>
+          <section id="top" className="about-page-hero">
+            <div className="about-page-hero-inner">
+              <p className="section-eyebrow">Our Story</p>
+              <h1>Why Lumloom?</h1>
+              <p>
+                The thoughts and values behind the tools we make.
+              </p>
+            </div>
+          </section>
+          <Philosophy />
+          <Manifesto />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
-      <Header />
+      <Header currentPage="home" />
       <main>
         <Hero />
-        <Philosophy />
-        <Manifesto />
         <Projects />
         <About />
       </main>
