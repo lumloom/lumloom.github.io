@@ -5,8 +5,16 @@
   margin: 0 auto;
 }
 
+.philosophy .section-eyebrow {
+  font-size: 13px;
+}
+
+.philosophy .section-title {
+  font-size: clamp(27px, 4vw, 35px);
+}
+
 .philosophy-text p {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--color-text-secondary);
   margin: 0 0 16px;
   max-width: 560px;
@@ -19,7 +27,7 @@
 
 .philosophy-ko {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.75;
   margin-top: 2px;
 }

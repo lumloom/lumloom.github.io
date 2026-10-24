@@ -15,10 +15,7 @@ export default function Hero() {
 
         <DailyLine />
 
-        <div className="hero-actions">
-          <a href="#projects" className="hero-cta">Explore Projects</a>
-          <a href="./about.html" className="hero-cta hero-cta-secondary">Why Lumloom?</a>
-        </div>
+        <a href="#projects" className="hero-cta">Explore Projects</a>
 
         <a href="#projects" className="hero-scroll-hint">
           <span className="hero-scroll-arrow" aria-hidden="true">↓</span>

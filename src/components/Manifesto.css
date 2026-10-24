@@ -1,22 +1,29 @@
 .manifesto-inner {
-  max-width: 560px;
+  max-width: 600px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.manifesto-inner p {
+.manifesto-title {
   font-family: var(--font-display);
-  font-size: clamp(20px, 3vw, 26px);
-  line-height: 1.6;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 32px;
+}
+
+.manifesto-korean {
+  font-family: var(--font-korean-serif);
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 2;
   color: var(--color-text-secondary);
+}
+
+.manifesto-korean p {
   margin: 0 0 28px;
 }
 
-.manifesto-inner p.manifesto-korean {
-  font-family: var(--font-korean-serif);
-  font-size: clamp(15px, 2vw, 17px);
-  line-height: 2;
-  color: var(--color-text-secondary);
-  opacity: 0.85;
+.manifesto-korean .manifesto-signature {
+  font-size: 14px;
+  color: var(--color-text);
   margin: 0;
 }

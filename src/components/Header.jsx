@@ -8,9 +8,8 @@ export default function Header({ currentPage }) {
         <nav className="header-nav" aria-label="Primary">
           <a href="./index.html#projects">Projects</a>
           <a href="./about.html" aria-current={currentPage === 'about' ? 'page' : undefined}>
-            Why Lumloom?
+            Our Story
           </a>
-          <a href="./index.html#about">About</a>
         </nav>
       </div>
     </header>

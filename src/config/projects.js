@@ -56,7 +56,7 @@ export const projects = [
   {
     id: 'giant-journal',
     status: 'live',
-    title: 'Journal 거인의기록',
+    title: '거인의기록 Journal',
     description: 'A personal journal for capturing the heart of each day.',
     story: 'Small records turn passing days into a life we can look back on.',
     storyKo: '오늘의 핵심과 소중한 순간을 남겨,\n흘러가는 하루를 다시 꺼내볼 수 있게 만들었습니다.',
