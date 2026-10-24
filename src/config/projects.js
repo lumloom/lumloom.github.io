@@ -66,6 +66,18 @@ export const projects = [
     url: 'https://lumloom.github.io/Journal/',
   },
   {
+    id: 'yeoun',
+    status: 'live',
+    title: '여운 Yeoun',
+    description: 'A quiet personal archive for books, films, series, and games.',
+    story: 'A quiet home for what stays with you.',
+    storyKo: '경험이 지나간 자리에 남는 것들을\n천천히 모아두고 싶었습니다.',
+    tags: ['Personal Archive', 'Media', 'Journal', 'Local-first'],
+    image: null,
+    button: 'Open App',
+    url: 'https://lumloom.github.io/yeoun/',
+  },
+  {
     id: 'ai-workspace',
     status: 'planning',
     title: 'Playground',
