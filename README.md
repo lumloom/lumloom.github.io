@@ -16,7 +16,7 @@ The official landing page for the Lumloom brand — a home for small ideas and s
 index.html          Home page — hero, projects, and about
 about.html          Why Lumloom and Manifesto page
 src/
-  components/   Header, Hero, Philosophy, Manifesto, Projects, About, Footer
+  components/   Header, Hero, Manifesto, Projects, Footer
   config/       projects.js — add new projects/apps here
   hooks/        useFadeIn — scroll fade-in animation
 ```
