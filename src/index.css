@@ -101,7 +101,7 @@ button:focus-visible {
 }
 
 .about-page-hero {
-  padding: 120px 24px 80px;
+  padding: 96px 24px 48px;
   text-align: center;
 }
 
@@ -115,11 +115,6 @@ button:focus-visible {
   font-size: clamp(42px, 7vw, 64px);
   font-weight: 500;
   line-height: 1.1;
-  margin: 0 0 20px;
-}
-
-.about-page-hero p:last-child {
-  color: var(--color-text-secondary);
   margin: 0;
 }
 

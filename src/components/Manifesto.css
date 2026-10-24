@@ -1,3 +1,8 @@
+.manifesto {
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
 .manifesto-inner {
   max-width: 600px;
   margin: 0 auto;
@@ -12,9 +17,10 @@
 }
 
 .manifesto-korean {
-  font-family: var(--font-korean-serif);
-  font-size: clamp(16px, 2vw, 18px);
-  line-height: 2;
+  font-family: var(--font-korean);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.95;
   color: var(--color-text-secondary);
 }
 
@@ -22,8 +28,6 @@
   margin: 0 0 28px;
 }
 
-.manifesto-korean .manifesto-signature {
-  font-size: 14px;
-  color: var(--color-text);
+.manifesto-korean p:last-child {
   margin: 0;
 }

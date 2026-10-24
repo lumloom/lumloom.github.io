@@ -24,14 +24,11 @@ function App() {
           <section id="top" className="about-page-hero">
             <div className="about-page-hero-inner">
               <p className="section-eyebrow">Lumloom</p>
-              <h1>Why Lumloom?</h1>
-              <p>
-                The thoughts and values behind the tools we make.
-              </p>
+              <h1>Our Story</h1>
             </div>
           </section>
-          <Philosophy />
           <Manifesto />
+          <Philosophy />
         </main>
         <Footer />
       </>

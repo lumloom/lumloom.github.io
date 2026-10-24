@@ -6,28 +6,15 @@ export default function Philosophy() {
   return (
     <section id="philosophy" className="section philosophy" ref={ref}>
       <div className="section-inner fade-in">
-        <p className="section-eyebrow">Why Lumloom?</p>
-        <h2 className="section-title">A name woven from two ideas</h2>
+        <p className="section-eyebrow">About the name</p>
+        <h2 className="section-title">이름의 뜻</h2>
         <div className="philosophy-text">
-          <p>
-            <strong>Lum</strong> represents light, curiosity and clarity.
-            <span className="philosophy-ko ko">
-              빛과 호기심, 그리고 새로운 시작.
-            </span>
+          <p className="ko">
+            Lumloom은 빛을 떠올리게 하는 <strong>Lum</strong>과 무언가를 천천히
+            엮는 <strong>Loom</strong>에서 가져온 이름입니다.
           </p>
-          <p>
-            <strong>Loom</strong> represents patiently weaving small moments
-            into something meaningful.
-            <span className="philosophy-ko ko">
-              작은 순간들을 인내심을 갖고 하나의 의미있는 것으로 엮어내는 과정.
-            </span>
-          </p>
-          <p>
-            We believe that everyday growth is created one small improvement
-            at a time.
-            <span className="philosophy-ko ko">
-              매일의 성장은 작은 개선 하나에서 시작된다고 믿습니다.
-            </span>
+          <p className="ko">
+            작은 생각을 실제 도구로 만들어간다는 뜻을 담았습니다.
           </p>
         </div>
       </div>
