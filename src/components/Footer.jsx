@@ -9,6 +9,7 @@ export default function Footer() {
         <div className="footer-links">
           <a href="https://github.com/lumloom" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://lumloom.github.io/blog/">Blog</a>
+          <a href="./account.html">Account</a>
         </div>
         <p className="footer-copyright">© {year} Lumloom. All rights reserved.</p>
       </div>

@@ -7,7 +7,7 @@ The official landing page for the Lumloom brand — a home for small ideas and s
 ## Tech
 
 - React + Vite
-- No backend, fully static
+- Static GitHub Pages frontend with Supabase Auth for the shared Lumloom account
 - Deployed via GitHub Pages
 
 ## Structure
@@ -15,11 +15,15 @@ The official landing page for the Lumloom brand — a home for small ideas and s
 ```
 index.html          Home page — hero, projects, and about
 about.html          Why Lumloom and Manifesto page
+account.html        Lumloom account sign-up, sign-in, and app launcher
 src/
   components/   Header, Hero, Manifesto, Projects, Footer
   config/       projects.js — add new projects/apps here
   hooks/        useFadeIn — scroll fade-in animation
+  data/         supabase.js — shared Lumloom Auth client
 ```
+
+The account page uses the same Supabase project as the Lumloom apps. Supabase `Confirm Email` and custom SMTP must be enabled so new users verify their address before signing in. The page also provides password-reset email requests; app access does not require a separate administrator approval.
 
 Add a new project by appending an object to `src/config/projects.js`:
 

@@ -1,0 +1,197 @@
+.account-page {
+  width: min(100% - 40px, 880px);
+  margin: 0 auto;
+  padding: 96px 0 120px;
+}
+
+.account-intro {
+  max-width: 620px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.account-intro h1 {
+  margin: 0;
+  font-family: var(--font-korean-serif);
+  font-size: clamp(38px, 7vw, 62px);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+}
+
+.account-intro > p:last-child {
+  max-width: 540px;
+  margin: 24px auto 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-korean);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.account-panel {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.62);
+  box-shadow: var(--shadow-soft);
+}
+
+.account-loading { margin: 0; color: var(--color-text-secondary); text-align: center; }
+
+.account-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.account-tabs button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.account-tabs button.active {
+  background: #fff;
+  color: var(--color-text);
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(32,32,32,0.08);
+}
+
+.account-form { display: grid; gap: 18px; }
+.account-form label,
+.account-password-change label { display: grid; gap: 7px; }
+.account-form label span,
+.account-password-change label span { color: var(--color-text-secondary); font-size: 13px; font-weight: 500; }
+.account-form input,
+.account-password-change input {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.88);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+.account-form input:focus,
+.account-password-change input:focus { outline: 2px solid rgba(123,143,119,0.32); border-color: var(--color-accent); }
+
+.account-primary-button,
+.account-password-change button {
+  min-height: 50px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.account-primary-button:disabled,
+.account-password-change button:disabled,
+.account-reset-button:disabled,
+.account-session-heading button:disabled { cursor: not-allowed; opacity: 0.55; }
+
+.account-reset-button {
+  display: block;
+  margin: 14px auto 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.account-caution {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+.account-caution strong { display: block; margin-bottom: 5px; font-size: 13px; }
+.account-caution p { margin: 0; color: var(--color-text-secondary); font-size: 12px; line-height: 1.65; }
+
+.account-notice {
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-accent);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.account-notice.is-error { color: #9c4c45; }
+
+.account-recovery-callout {
+  margin-bottom: 22px;
+  padding: 16px;
+  border: 1px solid rgba(123,143,119,0.34);
+  border-radius: 12px;
+  background: rgba(123,143,119,0.09);
+}
+.account-recovery-callout strong { display: block; margin-bottom: 5px; font-size: 13px; }
+.account-recovery-callout p { margin: 0; color: var(--color-text-secondary); font-size: 12px; line-height: 1.65; }
+
+.account-session-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+.account-session-heading div { display: grid; gap: 3px; flex: 1; min-width: 0; }
+.account-session-heading span { color: var(--color-text-secondary); font-size: 12px; }
+.account-session-heading strong { overflow: hidden; text-overflow: ellipsis; font-size: 15px; }
+.account-session-heading button { border: 0; background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+
+.account-apps { padding: 26px 0; }
+.account-apps > p { margin: 0 0 12px; font-size: 13px; font-weight: 600; }
+.account-apps > div { display: grid; gap: 8px; }
+.account-apps a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+  font-family: var(--font-korean);
+  font-size: 14px;
+}
+.account-apps a:hover { border-color: var(--color-accent); }
+.account-apps a span { color: var(--color-accent); font-size: 12px; }
+
+.account-password-change { padding-top: 18px; border-top: 1px solid var(--color-border); }
+.account-password-change summary { cursor: pointer; color: var(--color-text-secondary); font-size: 13px; font-weight: 500; }
+.account-password-change form { display: grid; grid-template-columns: 1fr 96px; gap: 10px; align-items: end; margin-top: 16px; }
+
+.account-footnote {
+  width: min(100%, 520px);
+  margin: 20px auto 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .account-page { width: min(100% - 32px, 520px); padding: 64px 0 88px; }
+  .account-intro { margin-bottom: 32px; }
+  .account-intro > p:last-child { font-size: 14px; }
+  .account-panel { padding: 22px 18px; }
+  .account-password-change form { grid-template-columns: 1fr; }
+  .account-password-change button { min-height: 46px; }
+}
