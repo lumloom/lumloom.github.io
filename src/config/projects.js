@@ -1,21 +1,6 @@
-// Each project card is rendered from this array — add a project by adding an entry.
-// status: 'live' | 'building' | 'planning' | 'archive'
-// button: label of the primary action; use disabled: true for non-clickable buttons.
-// storyKo is the Korean emotional voice — a companion thought, not a translation.
-// Use \n inside storyKo for intentional line breaks (rendered with pre-line).
-export const projects = [
-  {
-    id: 'adventure',
-    status: 'live',
-    title: '오늘의 모험',
-    description: 'A daily adventure app that transforms small tasks into meaningful quests.',
-    story: 'I wanted everyday routines to become adventures for my son.',
-    storyKo: "아이에게 '해야 하는 일'보다\n'하고 싶은 모험'을 선물하고 싶었습니다.",
-    tags: ['React', 'PWA', 'Education', 'Family'],
-    image: null,
-    button: 'Open App',
-    url: 'https://lumloom.github.io/adventure/',
-  },
+// Project cards are grouped by audience on the homepage.
+// Kids apps remain independent, local-first products and do not join Lumloom Account.
+export const mainProjects = [
   {
     id: 'writing',
     status: 'live',
@@ -31,7 +16,7 @@ export const projects = [
   {
     id: 'leaf',
     status: 'live',
-    title: 'Lumloom Leaf',
+    title: 'Leaf',
     description: 'A quiet journal for the plants you grow.',
     story: 'Record every leaf, every season, and every memory that grows along the way.',
     storyKo: '새잎이 나온 날, 처음 분갈이를 했던 날,\n식물과 함께한 모든 순간을 담고 싶었습니다.',
@@ -43,7 +28,7 @@ export const projects = [
   {
     id: 'giant-journal',
     status: 'live',
-    title: '거인의기록 Journal',
+    title: '거인의기록',
     description: 'A personal journal for capturing the heart of each day.',
     story: 'Small records turn passing days into a life we can look back on.',
     storyKo: '오늘의 핵심과 소중한 순간을 남겨,\n흘러가는 하루를 다시 꺼내볼 수 있게 만들었습니다.',
@@ -55,7 +40,7 @@ export const projects = [
   {
     id: 'yeoun',
     status: 'live',
-    title: '여운 Yeoun',
+    title: '여운',
     description: 'A quiet personal archive for books, films, series, and games.',
     story: 'A quiet home for what stays with you.',
     storyKo: '경험이 지나간 자리에 남는 것들을\n천천히 모아두고 싶었습니다.',
@@ -64,17 +49,37 @@ export const projects = [
     button: 'Open App',
     url: 'https://lumloom.github.io/yeoun/',
   },
+];
+
+export const kidsProjects = [
   {
-    id: 'ai-workspace',
-    status: 'planning',
-    title: 'Playground',
-    description: 'A space where new ideas and experiments grow.',
-    story: 'AI should reduce friction, not create complexity.',
-    storyKo: '작은 실험들, 아직 이름 없는 아이디어들이\n여기서 조용히 자라납니다.',
-    tags: ['AI', 'Experiments', 'Prototypes'],
+    id: 'adventure',
+    family: 'kids',
+    accountEnabled: false,
+    status: 'live',
+    title: '오늘의모험',
+    description: 'Small daily tasks become quests in a child-led adventure.',
+    story: 'I wanted everyday routines to become adventures for my son.',
+    storyKo: "아이에게 '해야 하는 일'보다\n'하고 싶은 모험'을 선물하고 싶었습니다.",
+    tags: ['Kids', 'Quests', 'Family', 'Local-first'],
     image: null,
-    button: 'Coming Soon',
-    url: '',
-    disabled: true,
+    button: 'Open App',
+    url: 'https://lumloom.github.io/adventure/',
+  },
+  {
+    id: 'moamoa',
+    family: 'kids',
+    accountEnabled: false,
+    status: 'live',
+    title: '모아모아',
+    description: 'A discovery card atlas for collecting what a child loves and learns.',
+    story: 'Curiosity grows when children can make knowledge truly their own.',
+    storyKo: '좋아하는 것을 그리고, 발견하고, 모으며\n아이만의 지식 도감이 자라납니다.',
+    tags: ['Kids', 'Discovery', 'Drawing', 'Local-first'],
+    image: null,
+    button: 'Open App',
+    url: 'https://lumloom.github.io/moamoa/',
   },
 ];
+
+export const projects = [...mainProjects, ...kidsProjects];

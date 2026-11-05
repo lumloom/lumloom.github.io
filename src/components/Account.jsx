@@ -2,7 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { projects } from '../config/projects';
 import { supabase } from '../data/supabase';
 
-const accountApps = projects.filter((project) => project.status === 'live' && !project.disabled);
+const accountApps = projects.filter(
+  (project) => project.status === 'live' && !project.disabled && project.accountEnabled !== false,
+);
 
 function errorMessage(error) {
   const text = error?.message || '';

@@ -162,6 +162,69 @@
   box-shadow: none;
 }
 
+.kids-projects {
+  margin-top: 72px;
+  padding: 40px;
+  border: 1px solid #D9D8CB;
+  border-radius: calc(var(--radius-lg) + 6px);
+  background: linear-gradient(135deg, #EFF2EA 0%, #F6EFE8 100%);
+}
+
+.kids-projects-heading {
+  max-width: 600px;
+}
+
+.kids-projects-eyebrow {
+  margin: 0 0 9px;
+  color: #8A7969;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kids-projects-heading h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: clamp(29px, 4vw, 36px);
+  font-weight: 500;
+}
+
+.kids-projects-heading > p:last-child {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-korean-serif);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.kids-project-grid {
+  margin-top: 30px;
+}
+
+.project-card.is-kids {
+  background: #FFFCF8;
+  border-color: #DAD5C8;
+  box-shadow: 0 1px 2px rgba(61, 52, 43, 0.03), 0 8px 24px rgba(61, 52, 43, 0.045);
+}
+
+.project-card.is-kids .project-card-status-dot,
+.project-card.is-kids .project-card-story-label {
+  color: #9A7B68;
+}
+
+.project-card.is-kids .project-card-story {
+  background: #F4F0E8;
+}
+
+.project-card.is-kids .project-card-tags li {
+  background: #EEECE3;
+}
+
+.project-card.is-kids .project-card-button {
+  background: #8E806E;
+}
+
 .projects-closing {
   text-align: center;
   padding: 96px 24px 24px;
@@ -189,6 +252,15 @@
 
   .project-card {
     padding: 28px;
+  }
+
+  .kids-projects {
+    margin-top: 52px;
+    padding: 26px 20px 20px;
+  }
+
+  .kids-project-grid {
+    margin-top: 24px;
   }
 
   .projects-closing {

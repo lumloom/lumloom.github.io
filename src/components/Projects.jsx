@@ -1,4 +1,4 @@
-import { projects } from '../config/projects';
+import { kidsProjects, mainProjects } from '../config/projects';
 import { useFadeIn } from '../hooks/useFadeIn';
 
 const statusLabels = {
@@ -8,11 +8,11 @@ const statusLabels = {
   archive: 'Archive',
 };
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, variant = 'main' }) {
   const label = statusLabels[project.status] ?? project.status;
 
   return (
-    <article className={`project-card status-${project.status}`}>
+    <article className={`project-card status-${project.status} ${variant === 'kids' ? 'is-kids' : ''}`}>
       {project.image && (
         <div className="project-card-media">
           <img src={project.image} alt="" className="project-card-image" />
@@ -73,10 +73,24 @@ export default function Projects() {
         </h2>
 
         <div className="project-grid">
-          {projects.map((project) => (
+          {mainProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+
+        <section className="kids-projects" aria-labelledby="kids-projects-title">
+          <div className="kids-projects-heading">
+            <p className="kids-projects-eyebrow">For young explorers</p>
+            <h3 id="kids-projects-title">Lumloom Kids</h3>
+            <p>호기심을 발견하고, 스스로 해내는 즐거움을 모으는 아이들의 작은 도구입니다.</p>
+          </div>
+
+          <div className="project-grid kids-project-grid">
+            {kidsProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} variant="kids" />
+            ))}
+          </div>
+        </section>
 
         <div className="projects-closing">
           <p>

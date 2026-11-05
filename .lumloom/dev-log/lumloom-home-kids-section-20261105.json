@@ -1,0 +1,57 @@
+{
+  "schema_version": "lumloom-dev-log/v1",
+  "work_id": "lumloom-home-kids-section-20261105",
+  "project_key": "lumloom",
+  "title": "Lumloom Kids 홈페이지 섹션 추가",
+  "purpose": "Lumloom의 네 가지 기록 앱과 어린이용 로컬 우선 앱을 홈페이지에서 명확히 나누고, 오늘의모험과 모아모아를 독립적인 Kids 제품군으로 안내한다.",
+  "category": "UI/UX",
+  "status": "Completed",
+  "completed_at": "2026-11-05T22:11:16+09:00",
+  "changes": [
+    "홈페이지 상단 프로젝트 목록을 하루문장, Leaf, 거인의기록, 여운의 네 가지 기록 앱으로 정리했다.",
+    "별도의 Lumloom Kids 섹션을 만들고 오늘의모험과 모아모아 카드를 추가했다.",
+    "Kids 섹션에 기존 홈페이지와 조화를 이루는 차분한 녹색·베이지 계열 배경과 카드 스타일을 적용했다.",
+    "오늘의모험과 모아모아를 Lumloom Account 앱 목록에서 제외해 공용 계정 동기화를 사용하지 않도록 했다."
+  ],
+  "technical_changes": {
+    "files": [
+      "src/config/projects.js",
+      "src/components/Projects.jsx",
+      "src/components/Projects.css",
+      "src/components/Account.jsx",
+      "package-lock.json"
+    ],
+    "modules": [
+      "Projects",
+      "Account",
+      "project configuration"
+    ],
+    "data_changes": [
+      "프로젝트 설정을 mainProjects와 kidsProjects로 분리했다.",
+      "Kids 프로젝트에 accountEnabled: false 메타데이터를 추가했다."
+    ]
+  },
+  "tests": [
+    {
+      "name": "npm.cmd run lint",
+      "result": "passed"
+    },
+    {
+      "name": "npm.cmd run build",
+      "result": "passed"
+    },
+    {
+      "name": "npm.cmd audit --json",
+      "result": "passed",
+      "details": "취약점 0건"
+    },
+    {
+      "name": "로컬 데스크톱 렌더링 확인",
+      "result": "passed",
+      "details": "네 개의 메인 카드와 별도의 Kids 패널 및 두 개의 Kids 카드가 의도한 순서와 색상으로 표시됨"
+    }
+  ],
+  "next_actions": [],
+  "deployment_url": "https://lumloom.github.io/",
+  "sensitive_data_review": "passed"
+}
