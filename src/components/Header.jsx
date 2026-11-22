@@ -10,7 +10,6 @@ export default function Header({ currentPage }) {
           <a href="./about.html" aria-current={currentPage === 'about' ? 'page' : undefined}>
             Our Story
           </a>
-          <a href="https://lumloom.github.io/blog/">Blog</a>
           <a href="./account.html" aria-current={currentPage === 'account' ? 'page' : undefined}>
             Account
           </a>
